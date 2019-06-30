@@ -1,0 +1,36 @@
+$mq-1: 768px !default;
+$mq-2: 992px !default;
+$mq-3: 1200px !default;
+$mq-4: 2300px !default;
+
+
+@mixin extra-small-only {
+    @media only screen and (max-width : $mq-1 - 0.0625) {
+        @content;
+    }
+}
+
+@mixin small-and-above {
+    @media only screen and (max-width : $mq-2) {
+        @content;
+    }
+}
+
+@mixin medium-and-above {
+    @media only screen and (max-width : $mq-3) {
+        @content;
+    }
+}
+
+@mixin large-and-above {
+    @media only screen and (max-width : $mq-4) {
+        @content;
+    }
+}
+
+@mixin extra-large {
+    @media only screen and (min-width : $mq-4) {
+        @content;
+    }
+}
+

@@ -1,0 +1,101 @@
+@import "./../../Style/color.scss";
+@import "./../../Style/variables.scss";
+@import "./../../Style/media-queries.scss";
+
+.home-page-container{
+
+  padding-bottom: 5%;
+
+  .banner-image{
+    box-shadow: 0px 0px 10px 3px $dark;
+    -moz-box-shadow: 0px 0px 10px 3px $dark;
+    -webkit-box-shadow: 0px 0px 10px 3px $dark; 
+    background-position: bottom; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 75vh;
+
+  }
+
+  .custom-carousel-container {
+    .carousel-slide{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+    }
+    .carousel{
+      padding-bottom:50px;
+    }
+
+    .carousel-indicators{
+      padding-top:3%;
+      li{
+        background-color:$dark;
+      }
+    }
+
+    .carousel-action-icon{
+      color:$dark;
+      font-size: 2em;
+    }
+  }
+
+    .product-Card {
+
+      @include extra-small-only {
+        &:first-child,&:nth-child(2),&:last-child {
+          display: none;
+        }
+      }
+
+      @include small-and-above {
+        &:first-child,&:last-child {
+          display: none;
+        }
+      }
+
+      @include large-and-above {
+        &:first-child {
+          display: none;
+        }
+      }
+
+      margin:15px;
+      padding:5px;
+      width: 22rem;
+
+      .product-Card-img{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;  
+        padding-bottom: 50px;
+
+        img{
+          max-width: 60%;
+          height: 150px;
+        }
+      }
+
+      .product-Card-content{
+        padding : 5px 0 10px 0;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .product-Card-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;  
+        padding-bottom: 20px;
+      }
+    }
+
+    
+    .see-product-button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;  
+      padding-top: 3%;
+    }
+}

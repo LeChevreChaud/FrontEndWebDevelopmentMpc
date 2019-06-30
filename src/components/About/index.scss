@@ -1,0 +1,63 @@
+@import "./../../Style/color.scss";
+@import "./../../Style/media-queries.scss";
+
+.about-page{
+
+    padding-bottom : 5%;
+
+    .card-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding : 0 5% 5% 5%;
+
+        .about-card{
+            @include  small-and-above {
+                width: 100%;
+            }
+        
+              @include large-and-above {
+                width: 300px;
+            }
+
+            width: 500px;
+        
+            margin : 3%;
+        }
+    }
+
+    .btn-container-about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgage-container-about{
+        height:80vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+
+        @include extra-large {
+            box-shadow: 0px 0px 10px 3px $dark;
+            -moz-box-shadow: 0px 0px 10px 3px $dark;
+            -webkit-box-shadow: 0px 0px 10px 3px $dark;
+        }
+
+        img{
+            width: 100%;
+            @include large-and-above {
+                box-shadow: 0px 0px 10px 3px $dark;
+                -moz-box-shadow: 0px 0px 10px 3px $dark;
+                -webkit-box-shadow: 0px 0px 10px 3px $dark;
+            }
+
+
+        }
+    }
+}
